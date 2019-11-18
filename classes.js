@@ -147,7 +147,7 @@ class Machine {
   
   makeWidgets(num) {
     this.widgets_made_count += num;
-    this.wear_and_tear_count = ;
+    this.wear_and_tear_count = this.widgets_made_count/50;
   }
 
   fixMachine() {
@@ -155,7 +155,7 @@ class Machine {
   }
 
   reboot() {
-    return function(){
+    return() => {
       this.wear_and_tear_count -= 10;
       this.needs_reboot = false;
     }
